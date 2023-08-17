@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: hello
+  name: hello
+spec:
+  containers:
+  - image: nginxinc/nginx-unprivileged:1.22.1
+    name: hello
+    # command: ["sleep", "1d"]
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
